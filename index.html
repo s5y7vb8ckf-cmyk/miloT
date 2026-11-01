@@ -21,7 +21,7 @@
 /* ضع رابط إصدار GitHub هنا بعد نشره، مثل:
 https://github.com/USERNAME/MILO-Cashier/releases/latest/download/MILO-Setup.exe
 */
-const DOWNLOAD_URL = 'https://github.com/s5y7vb8ckf-cmyk/MILO-Cashier/releases/download/1.0.0/Cashier.exe';
+const DOWNLOAD_URL = 'https://github.com/s5y7vb8ckf-cmyk/MILO-Cashier/releases/download/1.0.1/Cashier.exe';
 const btn=document.getElementById('downloadBtn'),toast=document.getElementById('toast');let toastTimer;
 btn.addEventListener('click',()=>{if(DOWNLOAD_URL && /^https:\/\//i.test(DOWNLOAD_URL)){window.open(DOWNLOAD_URL,'_blank','noopener,noreferrer')}else{toast.textContent='رابط التحميل لم يُضف بعد. بعد رفع ملف EXE إلى GitHub Releases، ضع رابطه في متغير DOWNLOAD_URL داخل ملف HTML.';toast.classList.add('show');clearTimeout(toastTimer);toastTimer=setTimeout(()=>toast.classList.remove('show'),6000)}});
 document.getElementById('year').textContent=new Date().getFullYear();
